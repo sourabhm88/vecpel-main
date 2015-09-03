@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+<entry key="getPetById">
+    
+             SELECT 
+				    MAIN.PET_ID,
+				    MAIN.PET_TYPE_ID,
+				    TYP.PET_TYPE,
+				    MAIN.PET_GROUP_ID,
+				    GRP.PET_GROUP_NAME,
+				    MAIN.PET_NAME,
+				    MAIN.PET_DOB,
+				    MAIN.PET_OWNER_ID
+				FROM
+				    PET_MAIN MAIN
+				        INNER JOIN
+				    PET_TYPE TYP ON MAIN.PET_TYPE_ID = TYP.PET_TYPE_ID
+				        INNER JOIN
+				    PET_GROUP GRP ON MAIN.PET_GROUP_ID = GRP.PET_GROUP_ID
+				        INNER JOIN
+				    PET_REF REF ON GRP.PET_GROUP_ID = REF.PET_GROUP_ID
+				WHERE MAIN.PET_ID = ?;
+    
+
+</entry>    
+<entry key="insertNewPetMain">
+    
+		INSERT INTO `vecpel`.`PET_MAIN` (`PET_ID`, `PET_TYPE_ID`, `PET_GROUP_ID`, `PET_NAME`, `PET_DOB`, `PET_OWNER_ID`) VALUES (?, ?, ?, ?, ?, ?);
+    
+</entry>
+
+<entry key="insertNewPetGroup">
+    
+		INSERT INTO `vecpel`.`PET_GROUP` (`PET_GROUP_ID`, `PET_GROUP_NAME`, `PET_OWNER_ID`) VALUES (?, ?, ?);
+    
+</entry>
+
+<entry key="insertNewPetRef">
+    
+		INSERT INTO `vecpel`.`PET_REF` (`REF_ID`, `PET_GROUP_ID`, `PET_ID`) VALUES (?, ?, ?);
+    
+</entry>
+
+<entry key="insertPetType">
+	
+		INSERT INTO `vecpel`.`PET_TYPE` (`PET_TYPE_ID`, `PET_TYPE`, `BREED_ID`, `PET_ID`) VALUES (?, ?, ?, ?);
+	
+</entry>
+
+<entry key="getAllPets">
+    
+             SELECT 
+				    MAIN.PET_ID,
+				    MAIN.PET_TYPE_ID,
+				    TYP.PET_TYPE,
+				    MAIN.PET_GROUP_ID,
+				    GRP.PET_GROUP_NAME,
+				    MAIN.PET_NAME,
+				    MAIN.PET_DOB,
+				    MAIN.PET_OWNER_ID
+				FROM
+				    PET_MAIN MAIN
+				        INNER JOIN
+				    PET_TYPE TYP ON MAIN.PET_TYPE_ID = TYP.PET_TYPE_ID
+				        INNER JOIN
+				    PET_GROUP GRP ON MAIN.PET_GROUP_ID = GRP.PET_GROUP_ID
+				        INNER JOIN
+				    PET_REF REF ON GRP.PET_GROUP_ID = REF.PET_GROUP_ID;
+    
+
+</entry> 
+
+
+
+</properties>

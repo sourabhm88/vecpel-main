@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="target/dependency/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="target/dependency/aopalliance-repackaged-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="target/dependency/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="target/dependency/hk2-api-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="target/dependency/hk2-locator-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="target/dependency/hk2-utils-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="target/dependency/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="target/dependency/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="target/dependency/javax.inject-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="target/dependency/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="target/dependency/jersey-client-2.21.jar"/>
+	<classpathentry kind="lib" path="target/dependency/jersey-common-2.21.jar"/>
+	<classpathentry kind="lib" path="target/dependency/jersey-container-servlet-core-2.21.jar"/>
+	<classpathentry kind="lib" path="target/dependency/jersey-guava-2.21.jar"/>
+	<classpathentry kind="lib" path="target/dependency/jersey-media-jaxb-2.21.jar"/>
+	<classpathentry kind="lib" path="target/dependency/jersey-server-2.21.jar"/>
+	<classpathentry kind="lib" path="target/dependency/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-aop-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-beans-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-context-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-core-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-expression-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-jdbc-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/spring-tx-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="target/dependency/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/sourabhmishra/Downloads/mysql-connector.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

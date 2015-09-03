@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- Common Bean Definitions  -->
+	<bean id="profile" class="com.vecpel.model.beans.ProfileBean" scope="prototype"></bean>
+	
+	<!-- Initialization for data source -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+       <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+       <property name="url" value="jdbc:mysql://localhost:3307/vecpel"/>
+       <property name="username" value="root"/>
+       <property name="password" value=""/>
+    </bean>
+    
+    
+	
+	<!-- Vet Bean Definitions  -->
+	<bean id="vet" class="com.vecpel.model.beans.VetBean" scope="prototype">
+		<property name="vetProfileBean" ref="profile"></property>
+	</bean>
+	
+	<bean id="vetDAO" class="com.vecpel.dao.impl.VetDAOImpl" scope="prototype">
+		<property name="queries" ref="vetQueryProps"></property>
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="vetQueryProps" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	    <property name="locations" value="classpath:/com/vecpel/dao/sql/queries/vet-queries.xml" />
+	</bean>
+	
+	<!-- Pet Bean Definitions  -->
+	<bean id="pet" class="com.vecpel.model.beans.PetBean" scope="prototype">
+	</bean>
+	
+	<bean id="petDAO" class="com.vecpel.dao.impl.PetDAOImpl" scope="prototype">
+		<property name="queries" ref="petQueryProps"></property>
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="petQueryProps" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	    <property name="locations" value="classpath:/com/vecpel/dao/sql/queries/pet-queries.xml" />
+	</bean>
+	
+	
+	
+	<!-- User Bean Definitions  -->
+	<bean id="user" class="com.vecpel.model.beans.UserBean" scope="prototype">
+		<property name="vetProfileBean" ref="profile"></property>
+	</bean>
+	
+	
+	
+	
+</beans>
